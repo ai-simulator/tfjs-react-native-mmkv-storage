@@ -1,6 +1,6 @@
 {
   "name": "tfjs-react-native-mmkv-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MMKV storage IO for tfjs react native based on react-native-mmkv",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",

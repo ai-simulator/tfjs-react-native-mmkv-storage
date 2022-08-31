@@ -5,7 +5,6 @@ MMKV storage IO for [tfjs-react-native](https://github.com/tensorflow/tfjs/tree/
 Alternative for tfjs built-in [asyncStorageIO](https://github.com/tensorflow/tfjs/blob/master/tfjs-react-native/src/async_storage_io.ts), which is based on [async-storage](https://github.com/react-native-async-storage/async-storage).
 
 [![NPM version](https://img.shields.io/npm/v/tfjs-react-native-mmkv-storage.svg?style=flat-square)](https://npmjs.org/package/tfjs-react-native-mmkv-storage)
-[![CI](https://github.com/paradite/tfjs-react-native-mmkv-storage/actions/workflows/node.js.yml/badge.svg)](https://github.com/paradite/tfjs-react-native-mmkv-storage/actions/workflows/node.js.yml)
 
 Differences with tfjs built-in asyncStorageIO:
 
@@ -20,7 +19,17 @@ $ yarn add tfjs-react-native-mmkv-storage
 
 ## Usage
 
-TODO
+```ts
+import { mmkvStorageIO } from 'tfjs-react-native-mmkv-storage';
+
+// save model
+const model = tf.sequential();
+// setup model...
+await model.save(mmkvStorageIO(`mymodel`));
+
+// load model
+const model = await tf.loadLayersModel(mmkvStorageIO(`mymodel`));
+```
 
 ## Testing
 
