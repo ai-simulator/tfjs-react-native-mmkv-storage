@@ -1,0 +1,43 @@
+{
+  "name": "tfjs-react-native-mmkv-storage",
+  "version": "1.0.0",
+  "description": "MMKV storage IO for tfjs react native based on react-native-mmkv",
+  "main": "dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "compile": "tsup src/index.ts --dts --format esm,cjs",
+    "prepublishOnly": "rm -rf ./dist && npm run compile"
+  },
+  "author": "paradite",
+  "license": "MIT",
+  "keywords": [
+    "mmkv",
+    "tfjs",
+    "react-native",
+    "storage"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "jest": "^28.0.1",
+    "ts-jest": "^28.0.8",
+    "tsup": "^6.2.2",
+    "typescript": "^4.5.4"
+  },
+  "peerDependencies": {
+    "react-native": "^0.69.5"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-core": "^3.20.0",
+    "base64-js": "^1.5.1",
+    "react-native": "^0.69.5",
+    "react-native-mmkv": "^2.4.3"
+  }
+}
