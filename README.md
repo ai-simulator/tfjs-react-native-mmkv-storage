@@ -11,6 +11,11 @@ Differences with tfjs built-in asyncStorageIO:
 - Use filesystem instead of SQLite on Android to avoid [storage limits](https://react-native-async-storage.github.io/async-storage/docs/limits)
 - Supposedly [faster](https://github.com/mrousavy/react-native-mmkv#benchmark)
 
+## Versions
+
+- v2.x: react-native-mmkv = 2.4.3 (dependency), react-native 0.70 and below
+- v3.x: react-native-mmkv = ^2.10.1 (peer dependency), react-native 0.71 and above
+
 ## Install:
 
 ```bash
